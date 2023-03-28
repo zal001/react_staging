@@ -1,0 +1,7 @@
+.home .list-group{
+    display: flex;
+    flex-direction: row;
+}
+.home .list-group li{
+    width: 120px;
+}

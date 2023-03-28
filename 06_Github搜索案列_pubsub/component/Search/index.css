@@ -1,0 +1,7 @@
+.jumbotron .jumbotron-body {
+  display: flex;
+  justify-content: center;
+}
+.jumbotron .jumbotron-heading {
+  text-align: center;
+}
