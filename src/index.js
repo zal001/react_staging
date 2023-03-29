@@ -12,6 +12,7 @@ import "./App.css"
 const root = createRoot(document.getElementById('root'))
 root.render(<BrowserRouter><App /></BrowserRouter>)
 
+// 监测redux中状态的改变， 如redux的状态发生了改变， 那么冲洗渲染App早已组件
 store.subscribe(() => {
     // // 渲染到App页面
     root.render(<BrowserRouter><App /></BrowserRouter>)
