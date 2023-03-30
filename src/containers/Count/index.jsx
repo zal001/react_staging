@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // 引入connect 用于链接UI组件与redux
 import { connect } from 'react-redux'
-import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from '../../redux/count_action'
+import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from '../../redux/actions/count'
 
 // 定义UI组件
 class CountUI extends Component {
@@ -43,6 +43,9 @@ class CountUI extends Component {
                 <button onClick={this.decrement}>-</button>&nbsp;
                 <button onClick={this.incrementIfAdd}>当前求和为奇数再加</button>&nbsp;
                 <button onClick={this.incrementAsyncAdd}>异步加</button>&nbsp;
+                <ul>
+                    {this.props.persons.map((item, index) => <li key={index}>{'名字' + item.name + '---年龄' + item.age}</li>)}
+                </ul>
             </div>
         )
     }
@@ -51,7 +54,7 @@ class CountUI extends Component {
 // 创建并暴露一个Count的容器组件
 export default connect(
     //  映射状态
-    state => ({ count: state }),
+    state => ({ count: state.countReducer,persons:state.personReducer}),
     // 映射操作状态的方法   mapDispatchToProps的一般写法 
     // dispatch => ({
     //     increment: data => dispatch(createIncrementAction(data)),

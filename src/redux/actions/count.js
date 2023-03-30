@@ -1,7 +1,7 @@
 /* 
   该文件专门为Count组件生成action对象
 */
-import { INCREMENT, DECREMENT } from "./constant"
+import { INCREMENT, DECREMENT } from "../constants/constant"
 
 // 返回值为同步的actions
 export const createIncrementAction = (data) => ({ type: INCREMENT, data })
