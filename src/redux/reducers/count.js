@@ -6,16 +6,16 @@ import { INCREMENT, DECREMENT } from "../constants/constant"
 
 
 const initState = 0
-export default function countReducer(preState = initState, action) {
+export default function countReducer(perState = initState, action) {
     // 从action 对象中获取： type，data
     const { type, data } = action
     // 根据type 决定如何加工数据
     switch (type) {
         case INCREMENT:  //如果是加
-            return preState + data * 1
+            return perState + data * 1
         case DECREMENT:  //如果是减
-            return preState - data * 1
+            return perState - data * 1
         default:
-            return preState
+            return perState
     }
 }
