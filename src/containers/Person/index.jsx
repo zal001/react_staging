@@ -29,7 +29,7 @@ class Person extends Component {
 }
 
 export default connect(
-    state => ({ persons: state.personReducer,count:state.countReducer }),
+    state => ({ persons: state.personReducer, count: state.countReducer }),
     {
         addPerson: createAddPersonObj
     }
