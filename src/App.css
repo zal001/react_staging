@@ -1,0 +1,14 @@
+/*base*/
+body {
+  background: #fff;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 300px;
+}

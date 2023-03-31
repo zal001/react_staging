@@ -382,7 +382,7 @@ npm add prop-types  /  yarn  add prop-types
 
 ```jsx
 // 1.通过react的lazy函数配合import()函数动态加载路由组件  ===》 路由组件代码会分开打包
-const Login = lazy(（） => import('@/pages/Login'))
+const Home = React.lazy(() => import('./Home'));
 // 2.通过<Supense>指定再加载得到路由打包文件钱显示一个自定义logind界面
 <Suspense fallback={<h1>loading...</h1>}>
     <Switch>
