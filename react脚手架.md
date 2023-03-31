@@ -342,13 +342,17 @@ npm add prop-types  /  yarn  add prop-types
    2. 数组的forEach()/map()/filter()/reduce()/find()/bind()
    3. promise
 
-### 6.5.3 求和案列_react-redux开发者工具的使用
+### 6.6 求和案列_react-redux开发者工具的使用
 
 1. npm install redux-devtools-extension  /   yadn add redux-devtools-extension
 2. store中进行配置
    - import  { composeWithDevTools} from 'redux-devtools-extension'
    - const store = createStore(allReducer,composeWithDevTools(applyMiddleware(thunk)))
 
+### 6.7 项目打包运行
 
-   ####    
+- npm run  build  项目打包生成build文件
+- 本地快速自建服务器流程：
+  -  npm i serve -g  //全局安装该插件
+  - 安装完成之后在当前目录下   打开黑窗口输入 serve
 
